@@ -17,7 +17,7 @@ disgust_data = df[df['emotion'] == 'others']
 disgust_data['New Name'] = disgust_data.apply(lambda row: f"{row['Subject']}_{row['Filename']}_{row['Onset']}", axis=1)
 
 # 輸出符合條件的資料行
-print(disgust_data)
+# print(disgust_data)
 
 # 指定源資料夾和目標資料夾路徑
 source_folder = r'E:\CASMEdata\CAS(ME)3\part_A\Part_A_ME_clip\video'
@@ -31,3 +31,5 @@ for index, row in disgust_data.iterrows():
     except FileNotFoundError:
         print(f"File not found for New Name: {new_name}. Skipping...")
         continue
+
+
